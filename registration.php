@@ -41,7 +41,7 @@
         $query = "INSERT into `users` (username, fullname, trn_date, Department, pss, question, answer) VALUES ('$username', '$fullname', '$trn_date', '$Department', '$pss', '$question', '$answer')"; 
         $result = mysqli_query($conn,$query);
         if($result){
-            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.php'>Login</a></div>";
+            echo "<div class='form'><h3>You are registered successfully.</h3><br/>Click here to <a href='index.html'>Login</a></div>";
         }
     }else{
 ?>

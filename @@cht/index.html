@@ -7,7 +7,7 @@ function loginForm() {
 	<strong><marquee behavior="alternate">WELCOME TO UNY</marquee></span></font></div></strong>
 	</br></br><a href="../choose.php">Goto Home Page</a>
 		<div id="loginform">
-			<form action="index.php" method="post">
+			<form action="index.html" method="post">
 			<h1>Live Chat</h1><hr/>
 				<label for="name">Please Enter Your Name To Continue</label>
 				<input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" value="'.$_SESSION['fullname'].'"/>
@@ -34,7 +34,7 @@ if (isset ( $_GET ['logout'] )) {
     fwrite ( $cb, "<div class='msgln'><i>User " . $_SESSION ['name'] . " has left the chat.</i><br></div>" );
     fclose ( $cb );
     // session_destroy ();
-    header ( "Location: index.php" );
+    header ( "Location: index.html" );
 }
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#exit").click(function(){
         var exit = confirm("Are You Sure You Want To Leave This Page?");
-        if(exit==true){window.location = 'index.php?logout=true';}     
+        if(exit==true){window.location = 'index.html?logout=true';}     
     });
 });
 $("#submitmsg").click(function(){
